@@ -444,14 +444,14 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="flectra_class_wizard" value="class $class_code$(models.TransientModel):&#10;    _name = '$class_name$'&#10;    _description = '$description$'&#10;&#10;" description="Wizard Class" toReformat="true" toShortenFQNames="true">
-    <variable name="class_code" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="class_name" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
+  <template name="flectra_class_wizard" value="class $class_code$(models.TransientModel):&#10;    _name = '$class_name$'&#10;    _description = '$description$'" description="Wizard Class" toReformat="true" toShortenFQNames="true">
+  <variable name="class_code" expression="" defaultValue="&quot;ModelName&quot;" alwaysStopAt="true" />
+  <variable name="class_name" expression="lowercaseAndDash(class_code)" defaultValue="" alwaysStopAt="true" />
+  <variable name="description" expression="" defaultValue="&quot;Description&quot;" alwaysStopAt="true" />
+  <context>
+    <option name="Python" value="true" />
+  </context>
+</template>
   <template name="flectra_class_report" value="class $class_code$(models.AbstractModel):&#10;    _name = 'report.$module_name$.$report_name$'&#10;    _description = '$description$'&#10;" description="Report Class" toReformat="true" toShortenFQNames="true">
     <variable name="class_code" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="module_name" expression="" defaultValue="" alwaysStopAt="true" />
